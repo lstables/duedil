@@ -9,7 +9,7 @@ class API {
     protected $uri = 'http://duedil.io/v3/sandbox/uk/companies/';
     protected $version = 'v3';
     protected $transport;
-    protected $key = '5tnn9sq3f9g95kbs6tcdnrmc';
+    protected $key = 'XXXXXXXXXXXXX';
 
     private $allowedMethods = ['get'];
 
@@ -35,7 +35,7 @@ class API {
             'update' => 'put',
             'create' => 'post'
         );
-        $key = '5tnn9sq3f9g95kbs6tcdnrmc';
+        $key = 'XXXXXXXXXXXXX';
         $method = strtoupper(( array_key_exists($method, $map) ? $map[$method] : $method ));
         // Set the full call URL
         $call = $this->uri. $args[0].'/credit-report?api_key='.$key;

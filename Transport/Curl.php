@@ -7,7 +7,7 @@ class Curl implements TransportInterface
     protected $uri;
     protected $method;
     protected $body;
-    protected $key = '5tnn9sq3f9g95kbs6tcdnrmc';
+    protected $key = 'XXXXXXXXXXXXX';
     protected $curl;
 
     /**
