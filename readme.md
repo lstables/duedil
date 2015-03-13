@@ -1,6 +1,14 @@
 Duedil API.
 
-Everything is set, but keep getting ````No response received from API```` if I die/dump 
+Everything is set, but keep getting 
+````
+object(Marketing\Duedil\Transport\Response)[382]
+  protected 'responseCode' => int 500
+  protected 'responseTime' => float 0.000189
+  protected 'responseBody' => 
+    array (size=1)
+      'error' => string 'No response received from API' (length=36)
+````  
 
 ````
 $response = $this->client->get($company_id);
