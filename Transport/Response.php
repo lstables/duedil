@@ -11,12 +11,12 @@ class Response {
      * @param $responseTime
      * @param array $responseBody
      */
-//    public function __construct($responseCode, $responseTime, Array $responseBody)
-//    {
-//        $this->responseCode = $responseCode;
-//        $this->responseTime = $responseTime;
-//        $this->responseBody = $responseBody;
-//    }
+    public function __construct($responseCode, $responseTime, Array $responseBody)
+    {
+        $this->responseCode = $responseCode;
+        $this->responseTime = $responseTime;
+        $this->responseBody = $responseBody;
+    }
     /**
      * The HTTP status code returned by the API
      *

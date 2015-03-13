@@ -83,17 +83,17 @@ class Curl implements TransportInterface
         $code   = curl_getinfo($this->curl, CURLINFO_HTTP_CODE);
         $time   = curl_getinfo($this->curl, CURLINFO_TOTAL_TIME);
 
-//        if (! $result) {
-//            return new Response(500, $time, array('error' => 'No response received from API ('.$this->method.' '.$this->uri.')'));
-//        }
-//
-//        if ($code == 404) {
-//            return new Response(404, $time, array('error' => 'Resource was not found ('.$this->method.' '.$this->uri.')'));
-//        }
-//
-//        if ($code == 405) {
-//            return new Response(404, $time, array('error' => 'Method ('.$this->method.') not allowed'));
-//        }
+        if (! $result) {
+            return new Response(500, $time, array('error' => 'No response received from API ('.$this->method.' '.$this->uri.')'));
+        }
+
+        if ($code == 404) {
+            return new Response(404, $time, array('error' => 'Resource was not found ('.$this->method.' '.$this->uri.')'));
+        }
+
+        if ($code == 405) {
+            return new Response(404, $time, array('error' => 'Method ('.$this->method.') not allowed'));
+        }
 
         $message = json_decode($result, true);
 
